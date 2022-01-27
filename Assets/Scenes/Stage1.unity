@@ -352,6 +352,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 214088985}
+  - component: {fileID: 214088986}
   m_Layer: 0
   m_Name: Scoring
   m_TagString: Untagged
@@ -373,6 +374,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &214088986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 214088984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07323b087eb21364c93a0b6d3c52692d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 123125422}
+  livesText: {fileID: 664871404}
 --- !u!1 &238571173
 GameObject:
   m_ObjectHideFlags: 0
@@ -1584,7 +1599,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  gameController: {fileID: 0}
+  scoringController: {fileID: 214088986}
 --- !u!50 &1830135445
 Rigidbody2D:
   serializedVersion: 4
