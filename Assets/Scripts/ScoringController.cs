@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GameController : MonoBehaviour
+public class ScoringController : MonoBehaviour
 {
     int lives = 3;
     int score = 0;
@@ -33,12 +33,6 @@ public class GameController : MonoBehaviour
     void Start()
     {
         UpdateUI();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     void UpdateUI()

@@ -10,7 +10,7 @@ public class BallScript : MonoBehaviour
     private Rigidbody2D rigidbodyComponent;
     private bool ballServed = false;
 
-    public GameController gameController;
+    public ScoringController scoringController;
 
     // Start is called before the first frame update
     void Start()
@@ -66,7 +66,7 @@ public class BallScript : MonoBehaviour
         movement = Vector2.Reflect(movement, contact.normal);
 
         Destroy(collision.gameObject);
-        gameController.Score += 10;
+        scoringController.Score += 10;
     }
 
     void wallCollide(Collision2D collision)
@@ -88,7 +88,7 @@ public class BallScript : MonoBehaviour
 
     void floorCollide(Collision2D collision)
     {
-        gameController.Lives--;
+        scoringController.Lives--;
         ballServed = false;
         rigidbodyComponent.transform.position = new Vector2(0.25f, -4.65f);
     }
